@@ -9,19 +9,15 @@ const formik = useFormik({
     emailField: '',
     pswField: ''
   },
-  onSubmit: values => {
-    console.log('form:', values)
+  onSubmit: (values) => {
+    alert("Login Successful");
   },
   validate: values =>{
     let errors = {};
     if (!values.emailField) errors.emailField = 'field required';
-    else if (!validator.isEmail('emailField')) errors.emailField = 'username should be an email';
+    else if (!validator.isEmail(values.emailField)) errors.emailField = 'username should be an email';
     if (!values.pswField) errors.pswField = 'field required';
-    if (value.pswField & validator.isEmail('emailField') & values.emailField) {
-    
-    }
     return errors;
-
   }
 });
   return (
