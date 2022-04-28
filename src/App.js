@@ -17,7 +17,7 @@ const formik = useFormik({
     if (!values.emailField) errors.emailField = 'field required';
     else if (!validator.isEmail('emailField')) errors.emailField = 'username should be an email';
     if (!values.pswField) errors.pswField = 'field required';
-    if (value.pswField) & (validator.isEmail('emailField')) & (values.emailField) {
+    if (value.pswField & validator.isEmail('emailField') & values.emailField) {
     
     }
     return errors;
